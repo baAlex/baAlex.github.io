@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="{{ page.author }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
+
+	<title>{{ site.author }} - {{ site.title }}</title>
+</head>
+
+<body>
+	<header>
+		<h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+	</header>
+
+	<article>
+
+		{{ content }}
+
+	</article>
+</body>
+
+</html>

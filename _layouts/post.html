@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="{{ page.author }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
+
+	<title>{{ page.short-title }} - {{ site.title }}</title>
+</head>
+
+<body>
+	<header>
+		<h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+	</header>
+
+	<article>
+		<h1>{{ page.title }} <a href="{{ page.url }}" title="Link to this article">#</a></h1>
+		<p><time datetime="{{ page.date | date: " %Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time></p>
+
+		{{ content }}
+
+	</article>
+
+	<footer>
+		<p><a href="{{ site.url }}/about">{{ site.author }}</a>. {{ site.time | date: "%Y" }}.</p>
+	</footer>
+</body>
+
+</html>

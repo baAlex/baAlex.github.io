@@ -1,0 +1,12 @@
+
+title: Notes for the unfortunate creature now reading
+author: Alexander Brandt
+
+baseurl: ""
+url: ""
+
+# github_username: jekyll
+# theme: minima
+
+plugins:
+  - jekyll-feed

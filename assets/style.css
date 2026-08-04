@@ -1,0 +1,158 @@
+@font-face {
+	font-family: 'Wittgenstein';
+	font-style: normal;
+	font-weight: normal;
+	src:
+		local('Wittgenstein'),
+		url('Wittgenstein-Regular.otf') format('opentype');
+	unicode-range: U+0000-00FF;
+}
+
+@font-face {
+	font-family: 'Wittgenstein';
+	font-style: normal;
+	font-weight: bold;
+	src:
+		local('Wittgenstein'),
+		url('Wittgenstein-Bold.otf') format('opentype');
+	unicode-range: U+0000-00FF;
+}
+
+@font-face {
+	font-family: 'M PLUS Code Latin 50';
+	font-style: normal;
+	font-weight: normal;
+	src:
+		local('M PLUS Code Latin 50'),
+		url('MplusCodeLatin50-Regular.otf') format('opentype');
+	unicode-range: U+0000-00FF;
+}
+
+@font-face {
+	font-family: 'M PLUS Code Latin 50';
+	font-style: normal;
+	font-weight: bold;
+	src:
+		local('M PLUS Code Latin 50'),
+		url('MplusCodeLatin50-Bold.otf') format('opentype');
+	unicode-range: U+0000-00FF;
+}
+
+body {
+	width: 60%;
+	margin: 0 auto 0 auto;
+	font-family: 'Wittgenstein', 'Times New Roman', serif;
+	line-height: 1.6;
+	color: #000;
+	background-color: #fff;
+	font-size: 1.1rem;
+}
+
+a {
+	color: inherit;
+}
+
+header,
+footer,
+article {
+	margin: 3rem 2rem;
+}
+
+h1,
+h2 {
+	margin: 1.5rem 0;
+	font-family: 'M PLUS Code Latin 50', 'Courier New', monospace;
+	font-weight: bold;
+}
+
+h1,
+article h2 {
+	font-size: 1.3rem;
+}
+
+article h1 {
+	font-size: 1.6rem;
+}
+
+article time {
+	font-family: 'M PLUS Code Latin 50', 'Courier New', monospace;
+	font-weight: bold;
+}
+
+footer {
+	text-align: center;
+}
+
+li code,
+p code {
+	padding: 0 0.3333rem;
+	background-color: #eee;
+}
+
+pre {
+	padding: 1rem;
+	font-size: 0.95rem;
+	overflow: auto;
+	line-height: 1.25;
+	border: thin solid #000;
+}
+
+code {
+	font-family: 'M PLUS Code Latin 50', 'Courier New', monospace;
+}
+
+code span.kt,
+code span.k {
+	color: #c0173c;
+}
+
+code span.c1 {
+	color: #42791d;
+	font-style: italic;
+}
+
+@media screen {
+	@media (max-width: 1000px) {
+		body {
+			width: 600px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		body {
+			width: 100%;
+			margin: 0;
+		}
+	}
+}
+
+@media print {
+	body {
+		width: 100%;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		color: #eee;
+		background-color: #111;
+	}
+
+	li code,
+	p code {
+		background-color: #222;
+	}
+
+	pre {
+		border: thin solid #eee;
+	}
+
+	code span.kt,
+	code span.k {
+		color: #ff5076;
+	}
+
+	code span.c1 {
+		color: #70c03b;
+	}
+}
