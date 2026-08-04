@@ -89,6 +89,27 @@ p code {
 	background-color: #eee;
 }
 
+.flex {
+	display: flex;
+	margin: 2rem 0 2rem 0;
+}
+
+.block_container_w100 {
+	display: block;
+	width: 100%;
+}
+
+canvas {
+	width: 100%;
+	border: thin solid #000;
+	color: #000;
+}
+
+label {
+	display: block;
+	font-family: system-ui;
+}
+
 pre {
 	padding: 1rem;
 	font-size: 0.95rem;
@@ -155,6 +176,11 @@ code span.c1 {
 	li code,
 	p code {
 		background-color: #222;
+	}
+
+	canvas {
+		border: thin solid #eee;
+		color: #eee;
 	}
 
 	pre {

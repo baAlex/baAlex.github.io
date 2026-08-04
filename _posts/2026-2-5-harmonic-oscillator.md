@@ -22,6 +22,26 @@ I have been fascinated by it because of how much is capable of do. It oscillates
 
 Here you can see it in action, with a little extra on top:
 
+<div class="flex">
+	<script src="/assets/harmonic-oscillator.js"></script>
+	<span>
+		<label>Frequency:<input type="range" id="frequency" min="55" max="880" value="220" list="f_markers"/></label>
+		<label>Decay:<input type="range" id="decay" min="1" max="5000" value="1000" list="d_markers"/></label>
+		<label>Amplitude:<input type="range" id="amplitude" min="0" max="1" value="0.5" list="a_markers" step="0.01"/></label>
+		<label>Sweep:<input type="range" id="sweep" min="-8" max="4" value="0" list="s_markers" step="0.01"/></label>
+		<button id="play">Play</button>
+		<button id="stop">Stop</button>
+
+		<datalist id="f_markers"><option value="220"></option></datalist>
+		<datalist id="d_markers"><option value="1000"></option></datalist>
+		<datalist id="a_markers"><option value="0.5"></option></datalist>
+		<datalist id="s_markers"><option value="0"></option></datalist>
+	</span>
+	<div id="canvas_container" class="block_container_w100">
+		<canvas id="canvas" width="300" height="100">Html5 canvas not supported.</canvas>
+	</div>
+</div>
+
 Proper introduction is that it's an [Harmonic Oscillator](https://en.wikipedia.org/wiki/Harmonic_oscillator), also a [Mass-spring-damper Model](https://en.wikipedia.org/wiki/Mass-spring-damper_model), more commonly known as "jiggle physics", especially in video-games and related fields. Code above is a Semi-Implicit Euler implementation, I stitched it together from [Precise Control over Numeric Springing](https://allenchou.net/2015/04/game-math-precise-control-over-numeric-springing/) by Allen Chou (2015), and [The physics behind spring animations](https://blog.maximeheckel.com/posts/the-physics-behind-spring-animations/) by Maxime Heckel (2020). Here is a comparison with Implicit Euler without me simplifying zeta and omega:
 
 ``` c++
