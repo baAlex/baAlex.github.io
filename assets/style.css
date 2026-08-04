@@ -97,6 +97,20 @@ pre {
 	border: thin solid #000;
 }
 
+img {
+	width: 100%;
+}
+
+img.icon {
+	display: inline;
+	width: 1em;
+}
+
+hr {
+	margin: 1.75rem 0;
+	border: none;
+}
+
 code {
 	font-family: 'M PLUS Code Latin 50', 'Courier New', monospace;
 }
@@ -112,13 +126,13 @@ code span.c1 {
 }
 
 @media screen {
-	@media (max-width: 1000px) {
+	@media (max-width: 1200px) {
 		body {
-			width: 600px;
+			width: 720px;
 		}
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 720px) {
 		body {
 			width: 100%;
 			margin: 0;

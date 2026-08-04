@@ -5,7 +5,7 @@ author: Alexander Brandt
 baseurl: ""
 url: https://baalex.github.io
 
-# github_username: jekyll
+github_username: baAlex
 # theme: minima
 
 plugins:
