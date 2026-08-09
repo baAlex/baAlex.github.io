@@ -5,13 +5,13 @@ short-title: Microblogging
 permalink: /microblogging/
 ---
 
-<p id="2026-8-4"><time datetime="2026-8-4">2026-8-4 </time><a href="#2026-8-4" title="Link to this entry">#</a></p>
+<p id="2026-08-04"><time datetime="2026-08-04">2026-08-04 </time><a href="#2026-08-04" title="Link to this entry">#</a></p>
 
 Blog moved from [Neocities](https://neocities.org/), it was also an opportunity of learn Jekyll. (ps, previous address was really good: [notesfortheunfortunate.neocities.org](https://notesfortheunfortunate.neocities.org/)).
 
 ----
 
-<p id="2026-6-7"><time datetime="2026-6-7">2026-6-7 </time><a href="#2026-6-7" title="Link to this entry">#</a></p>
+<p id="2026-06-07"><time datetime="2026-06-07">2026-06-07 </time><a href="#2026-06-07" title="Link to this entry">#</a></p>
 
 Biblically accurate Word (also, long live the' Freetype!).
 
@@ -19,7 +19,7 @@ Biblically accurate Word (also, long live the' Freetype!).
 
 ----
 
-<p id="2026-6-3"><time datetime="2026-6-3">2026-6-3 </time><a href="#2026-6-3" title="Link to this entry">#</a></p>
+<p id="2026-06-03"><time datetime="2026-06-03">2026-06-03 </time><a href="#2026-06-03" title="Link to this entry">#</a></p>
 
 Sketch (red is winning).
 
@@ -27,7 +27,7 @@ Sketch (red is winning).
 
 ----
 
-<p id="2026-6-1"><time datetime="2026-6-1">2026-6-1 </time><a href="#2026-6-1" title="Link to this entry">#</a></p>
+<p id="2026-06-01"><time datetime="2026-06-01">2026-06-01 </time><a href="#2026-06-01" title="Link to this entry">#</a></p>
 
 Oh no, another side-project.
 
@@ -35,7 +35,7 @@ Oh no, another side-project.
 
 ----
 
-<p id="2026-1-11"><time datetime="2026-1-11">2026-1-11 </time><a href="#2026-1-11" title="Link to this entry">#</a></p>
+<p id="2026-01-11"><time datetime="2026-01-11">2026-01-11 </time><a href="#2026-01-11" title="Link to this entry">#</a></p>
 
 I have a square looking "The Triangle" in SDL3_GPU. Mysterious diagram photoshopped, never heard about texture samplers, what's that?.
 
@@ -43,6 +43,6 @@ I have a square looking "The Triangle" in SDL3_GPU. Mysterious diagram photoshop
 
 ----
 
-<p id="2026-1-10"><time datetime="2026-1-10">2026-1-10 </time><a href="#2026-1-10" title="Link to this entry">#</a></p>
+<p id="2026-01-10"><time datetime="2026-01-10">2026-01-10 </time><a href="#2026-01-10" title="Link to this entry">#</a></p>
 
 Future me, are you reading this with nostalgia?... it's painful, isn't it?.

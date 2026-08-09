@@ -173,18 +173,18 @@ for (const Face* f1 = faces->Data(); f1 < faces->End(); f1 += 1)
 This algorithm here is basically me trying to avoid the one proposed by Stefan Hajnoczi in [.MAP files file format description, algorithms, and code](https://github.com/stefanha/map-files/blob/master/MAPFiles.pdf) (2001). It looks like this:
 
 ```
-For i = 0 to NumberOfFaces – 3
+For i = 0 to NumberOfFaces - 3
 {
-   For j = i to NumberOfFaces – 2
+   For j = i to NumberOfFaces - 2
    {
-      For k = j to NumberOfFaces – 1
+      For k = j to NumberOfFaces - 1
       {
          if ( i != j != k )
          {
             legal = true;
             newVertex = GetIntersection ( i, j , k );
 
-            for m = 0 to NumberOfFaces – 1
+            for m = 0 to NumberOfFaces - 1
             {
                // Test if the point is outside the brush
                if ( DotProduct ( Faces[ m ].normal, newVertex ) + Faces[ m ].d > 0 )

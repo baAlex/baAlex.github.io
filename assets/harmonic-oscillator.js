@@ -115,7 +115,7 @@ function Resize(canvas, context) {
 
 	const colour = getComputedStyle(canvas).color;
 
-	context.font = "1rem 'M PLUS Code Latin 50'"; // Seems I need to update these
+	context.font = "1rem 'TeX Gyre Heros', 'Arial', sans-serif";
 	context.lineWidth = 2;
 	context.strokeStyle = colour;
 	context.fillStyle = colour;

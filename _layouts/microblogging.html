@@ -7,24 +7,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
 
-	<style>
-		html,
-		body {
-			font-family: 'M PLUS Code Latin 50', serif;
-			background-color: #006659;
-			color: #fff;
-		}
-	</style>
-
 	<title>{{ page.short-title }} - {{ site.title }}</title>
 </head>
 
-<body>
+<body id="microblogging">
 	<header>
 		<h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
 	</header>
 
-	<article id="microblogging">
+	<article>
 
 		{{ content }}
 

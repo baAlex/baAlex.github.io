@@ -1,51 +1,51 @@
 @font-face {
-	font-family: 'Wittgenstein';
+	font-family: 'TeX Gyre Thermes';
 	font-style: normal;
 	font-weight: normal;
 	src:
-		local('Wittgenstein'),
-		url('Wittgenstein-Regular.otf') format('opentype');
+		local('TeX Gyre Thermes'),
+		url('texgyretermes-regular.otf') format('opentype');
 	unicode-range: U+0000-00FF;
 }
 
 @font-face {
-	font-family: 'Wittgenstein';
+	font-family: 'TeX Gyre HerosCn';
 	font-style: normal;
 	font-weight: bold;
 	src:
-		local('Wittgenstein'),
-		url('Wittgenstein-Bold.otf') format('opentype');
+		local('TeX Gyre HerosCn'),
+		url('texgyreheroscn-bold.otf') format('opentype');
 	unicode-range: U+0000-00FF;
 }
 
 @font-face {
-	font-family: 'M PLUS Code Latin 50';
+	font-family: 'TeX Gyre Heros';
+	font-style: normal;
+	font-weight: bold;
+	src:
+		local('TeX Gyre Heros'),
+		url('texgyreheros-regular.otf') format('opentype');
+	unicode-range: U+0000-00FF;
+}
+
+@font-face {
+	font-family: 'Courier Prime, Regular';
 	font-style: normal;
 	font-weight: normal;
 	src:
-		local('M PLUS Code Latin 50'),
-		url('MplusCodeLatin50-Regular.otf') format('opentype');
-	unicode-range: U+0000-00FF;
-}
-
-@font-face {
-	font-family: 'M PLUS Code Latin 50';
-	font-style: normal;
-	font-weight: bold;
-	src:
-		local('M PLUS Code Latin 50'),
-		url('MplusCodeLatin50-Bold.otf') format('opentype');
+		local('Courier Prime, Regular'),
+		url('CourierPrime-Regular.ttf') format('truetype');
 	unicode-range: U+0000-00FF;
 }
 
 body {
 	width: 60%;
 	margin: 0 auto 0 auto;
-	font-family: 'Wittgenstein', 'Times New Roman', serif;
+	font-family: 'TeX Gyre Thermes', 'Times New Roman', serif;
 	line-height: 1.6;
-	color: #000;
-	background-color: #fff;
-	font-size: 1.1rem;
+	color: #000000;
+	background-color: #ffffff;
+	font-size: 1.2rem;
 }
 
 a {
@@ -60,22 +60,22 @@ article {
 
 h1,
 h2 {
-	margin: 1.5rem 0;
-	font-family: 'M PLUS Code Latin 50', 'Courier New', monospace;
+	font-family: 'TeX Gyre HerosCn', 'Arial Condensed', 'Arial', sans-serif;
 	font-weight: bold;
+	margin: 1rem 0;
 }
 
 h1,
 article h2 {
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 }
 
 article h1 {
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 }
 
 article time {
-	font-family: 'M PLUS Code Latin 50', 'Courier New', monospace;
+	font-family: 'TeX Gyre HerosCn', 'Arial Condensed', 'Arial', sans-serif;
 	font-weight: bold;
 }
 
@@ -86,12 +86,11 @@ footer {
 li code,
 p code {
 	padding: 0 0.3333rem;
-	background-color: #eee;
+	background-color: #eeeeee;
 }
 
 .flex {
 	display: flex;
-	margin: 2rem 0 2rem 0;
 }
 
 .block_container_w100 {
@@ -101,21 +100,27 @@ p code {
 
 canvas {
 	width: 100%;
-	border: thin solid #000;
-	color: #000;
+	border: thin solid #000000;
+	color: #000000;
 }
 
-label {
+label,
+button {
 	display: block;
-	font-family: system-ui;
+	font-family: 'TeX Gyre Heros', 'Arial', sans-serif;
+	font-size: 1.0rem;
+}
+
+button {
+	display: inline-block;
+	padding: 0.3333em;
 }
 
 pre {
-	padding: 1rem;
-	font-size: 0.95rem;
+	padding: 0.6666rem;
 	overflow: auto;
-	line-height: 1.25;
-	border: thin solid #000;
+	line-height: 1.0;
+	border: thin solid #000000;
 }
 
 img {
@@ -128,22 +133,61 @@ img.icon {
 }
 
 hr {
-	margin: 1.75rem 0;
+	margin: 2.0rem 0;
 	border: none;
 }
 
 code {
-	font-family: 'M PLUS Code Latin 50', 'Courier New', monospace;
+	font-family: 'Courier Prime, Regular', 'Courier New', monospace;
+	font-size: 1.0rem;
 }
 
 code span.kt,
 code span.k {
-	color: #c0173c;
+	color: #0000ff;
 }
 
 code span.c1 {
-	color: #42791d;
-	font-style: italic;
+	color: #008000;
+}
+
+
+#home_container {
+	display: inline-flex;
+	margin: 0;
+}
+
+#home_container p,
+#home_container article {
+	margin-top: 0;
+}
+
+#home_sidebar {
+	font-family: 'TeX Gyre HerosCn', 'Arial Condensed', 'Arial', sans-serif;
+	font-weight: bold;
+	background-color: #006060;
+	padding: 2rem 2rem 2rem 2rem;
+	font-size: 1.2rem;
+	color: white;
+}
+
+#home_sidebar ul {
+	padding: 0 1em;
+	margin: 0;
+}
+
+#microblogging {
+	background-color: #006060;
+	color: #ffffff;
+	font-family: 'TeX Gyre Heros', 'Arial', sans-serif;
+	font-size: 1.0rem;
+	line-height: 1.6;
+}
+
+#microblogging time {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	font-weight: normal;
 }
 
 @media screen {
@@ -158,6 +202,21 @@ code span.c1 {
 			width: 100%;
 			margin: 0;
 		}
+
+		#home_container {
+			display: inline;
+			margin: 0;
+		}
+
+		#home_sidebar {
+			text-align: center;
+		}
+
+		#home_sidebar ul li {
+			list-style-type: none;
+			display: inline-block;
+			margin: 0 0.25em;
+		}
 	}
 }
 
@@ -169,30 +228,31 @@ code span.c1 {
 
 @media (prefers-color-scheme: dark) {
 	body {
-		color: #eee;
-		background-color: #111;
+		color: #ffffff;
+		background-color: #060606;
+		/* TODO, An Encarta from the era had pure white on black */
 	}
 
 	li code,
 	p code {
-		background-color: #222;
+		background-color: #131313;
 	}
 
 	canvas {
-		border: thin solid #eee;
-		color: #eee;
+		border: thin solid #ffffff;
+		color: #ffffff;
 	}
 
 	pre {
-		border: thin solid #eee;
+		border: thin solid #ffffff;
 	}
 
 	code span.kt,
 	code span.k {
-		color: #ff5076;
+		color: #ff60a0;
 	}
 
 	code span.c1 {
-		color: #70c03b;
+		color: #409060;
 	}
 }
