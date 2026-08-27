@@ -1,13 +1,13 @@
 ---
-layout: post
 title: "Harmonic oscillator, I turned jiggle physics code into a synthesizer"
 short-title: "Harmonic oscillator"
 permalink: "/harmonic-oscillator"
 tags: [Audio, Physics]
 date: 2026-2-5
+layout: post
 ---
 
-Look at this thing, isn't pretty?:
+Look at this thing, isn't it pretty?:
 
 ``` c++
 float HarmonicOscillator::Step()
@@ -100,7 +100,7 @@ float HarmonicOscillator::Step()
 }
 ```
 
-Changes from Chou's `SpringSemiImplicit()` aren't that many. In `StepWithSweep()` the most noticeable one is that `x_target` is zero, thus deleted, this turns a spring model into an oscillator (audio signals should oscillate around zero). Done that, expressions `omega * omega` and `2.0f * zeta * omega` are resolved at initialisation rather than every frame. Of the three h, time-steps, two are repurposed as sweep, and one deleted. This is what in game development is known as `dt`, delta time, generally used to counter frame-rate changes by scaling motion/animations. Here it's scaling oscillation frequency, and only frequency (more on this later). By keeping the three original `h` we will also being scaling decay, and we don't want that.
+Changes from Chou's `SpringSemiImplicit()` aren't that many. In `StepWithSweep()` the most noticeable one is that `x_target` is zero, thus deleted, this turns a spring model into an oscillator (audio signals should oscillate around zero). Done that, expressions `omega * omega` and `2.0f * zeta * omega` are resolved at initialisation rather than every frame. Of the three `h`, time-steps, two are repurposed as sweep, and one deleted. This is what in game development is known as `dt`, delta time, generally used to counter frame-rate changes by scaling motion/animations. Here it's scaling oscillation frequency, and only frequency (more on this later). By keeping the three original `h` we will also scale decay, and we don't want that.
 
 Finally, `Step()` only differs on assuming a sweep or time-step of 1, thus deleted.
 
@@ -122,7 +122,7 @@ void HarmonicOscillator::Initialise(float sampling_frequency, float frequency, f
 }
 ```
 
-`m_omega` is usual frequency business, now `m_zeta` is far more interesting, it's a non-standard half-life function to control decay. How it works?, this talk is gold: [Lerp smoothing is broken](https://www.youtube.com/watch?v=LSNQuFEDOyQ) by Freya Holmér (2024), she covers it under "The Exact Damper" section.
+`m_omega` is usual frequency business, now `m_zeta` is far more interesting, it's a non-standard half-life function to control decay. How does it work?, this talk is gold: [Lerp smoothing is broken](https://www.youtube.com/watch?v=LSNQuFEDOyQ) by Freya Holmér (2024), she covers it under "The Exact Damper" section.
 
 What happens is that in the `Step()` function, the term `m_v -= m_v * m_zeta` is exponential. By using a `m_zeta` less than 1, `m_v` will approach zero without ever reaching it, with every step being smaller than previous one. We can see it by setting `m_v = 1; m_zeta = 0.5` and iterating on it:
 
@@ -143,7 +143,7 @@ It looks nice on a plot, our real problem then is to find a `m_zeta` from a desi
 6. `m_v = 0.389 - 0.389 * 0.14537076`
 7. `m_v = 0.333 - 0.333 * 0.14537076`
 
-Spooky. No more questions asked, it works. One wee tiny bitty problem tho, is that as I said before, it approaches zero without ever reaching it, best solution is to simply content us by stopping at a tiny value. However that 0.001 in `m_zeta = 1.0f - expf(logf(0.001f) / decay_frames)` is not your typical `EPSILON`, it's -60dB (decibels). Simply lovely, avoid us a problem and it looks nice when using Audacity in logarithmic scale.
+Spooky. No more questions asked, it works. One wee tiny bitty problem tho, as said before, it approaches zero without ever reaching it, so to stop this the best solution is to simply do it at a tiny value. However that 0.001 in `m_zeta = 1.0f - expf(logf(0.001f) / decay_frames)` is not your typical `EPSILON`, it's -60dB (decibels).
 
 Finally, the rest. `m_v = m_omega * amplitude` is only a value to compensate for this part `m_v -= (...) + this.x * this.omega` in `Step()`, it can be zero, nothing oscillates in that case, and you can set it later.
 

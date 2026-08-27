@@ -1,10 +1,10 @@
 ---
-layout: post
 title: "Lorem ipsum"
 short-title: "Lorem ipsum"
 permalink: "/lorem-ipsum"
 tags: [Blog, Personal]
 date: 2025-12-27
+layout: post
 ---
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit arcu, sed inceptos ultrices nec parturient dui euismod senectus facilisis, iaculis facilisi posuere commodo faucibus taciti magna. Commodo blandit aenean quam inceptos feugiat arcu mus turpis porta, sed massa id nisl platea torquent curae aliquet ac nunc, ultrices egestas est duis praesent morbi tellus ornare. Auctor libero nibh lectus morbi fusce venenatis hac quis, blandit rutrum curae suscipit justo volutpat mattis mollis, risus varius montes massa dui sociosqu leo.

@@ -1,13 +1,13 @@
 ---
-layout: post
-title: "Polytopes, or: How convert a convex shape/body defined by planes into vertices without dying in the process"
+title: "Polytopes, or: How to convert a convex shape/body defined by planes into vertices without dying in the process"
 short-title: Polytopes
 permalink: "/polytopes"
 tags: [Algorithm, Geometry, Game development, Quake-adjacent]
 date: 2025-12-28
+layout: post
 ---
 
-Surprisingly isn't that hard... as long you're not concerned about performance or doing it in real time. In my first, and suddenly final, attempt at doing it I was able to process a quite large map in around 2 ms (in a single thread on an Intel N95). I truly was expecting something horrible measured in seconds, but no, it was just the academic papers that scared me. Though, in their defence they were concerned about million of planes from weird malformed data. In my case I'm just parsing a MAP file made by a human being in a map editor (MAP file a la Quake 1, 2, 3, Half-Life, Doom 3, Half-Life 2, that kind).
+Surprisingly isn't that hard... as long as you're not concerned about performance or doing it in real time. In my first, and suddenly final attempt at doing it I was able to process a quite large map in around 2 ms (in a single thread on an Intel N95). I truly was expecting something horrible measured in seconds, but no, it was just the academic papers that scared me. Though, in their defence they were concerned about million of planes from weird malformed data. In my case I'm just parsing a MAP file made by a human being in a map editor (MAP file a la Quake 1, 2, 3, Half-Life, Doom 3, Half-Life 2, that kind).
 
 Taking a face-centric approach, the problem to solve revolves around finding the vertices that form a particular face, done that, what remains is to repeat the algorithm through every face of the shape. It looks like this:
 
@@ -135,7 +135,7 @@ outside_continue:
 }
 ```
 
-Bit ugly unrolled like that, innit?, it can be abstracted. Anyway, `Equal` is basically `fabs(x) < EPSILON`, same intent with `BIG_EPSILON`, a small number appropriate for map editors (I'm using 0.5 since the minimum grid snap is 1 unit out there). Also, it shines the fact that we are dealing with convex shapes, as is extremely easy to remove intersections that don't contribute to overall shape. And finally a warning, all our faces here point outside, Cyrus-Beck will kick your dog or something if that isn't the case (although a single condition should be needed to deal with it, may be the case that our planes come from a bad BSP splitting stage).
+Bit ugly unrolled like that, innit?, it can be abstracted. Anyway, `Equal` is basically `fabs(x) < EPSILON`, same intent with `BIG_EPSILON`, a small number appropriate for map editors (I'm using 0.5 since the minimum grid snap is 1 unit out there). Also, it shines the fact that we are dealing with convex shapes, as is extremely easy to remove intersections that don't contribute to the overall shape. And finally a warning, all our faces here point outside, Cyrus-Beck will kick your dog or something if that isn't the case (although a single condition should be enough to deal with it, may be the case that our planes come from a bad BSP splitting stage).
 
 And since you are still here, there's a little optimisation that can be done if you only need all vertices of the brush and no more than that. It exploits the fact that most of them are shared, so it only iterates over distinct pairs of faces:
 
@@ -205,7 +205,7 @@ For i = 0 to NumberOfFaces - 3
 }
 ```
 
-Quite similar. For most purposes it's only one `for` more, and since brushes rarely have more than 6 faces I can imagine no performance impact at all.
+Rather similar. For most purposes it's only one `for` more, and since brushes rarely have more than 6 faces I can imagine no performance impact at all.
 
 Then there's the algorithm written by God himself, John Carmack. Which sadly, I couldn't understand except that he's really careful on preserving "windings" (segments in a face?) through the entire map compilation (why not make it at a final stage?). Someone summarised it on [quakewiki.org](https://quakewiki.org/wiki/Quake_Map_Format):
 
