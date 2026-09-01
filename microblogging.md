@@ -5,6 +5,16 @@ short-title: Microblogging
 permalink: /microblogging/
 ---
 
+<p id="2026-09-01"><time datetime="2026-09-01">2026-09-01 </time><a href="#2026-09-01" title="Link to this entry">#</a></p>
+
+Felt artistic, might delete later.
+
+![](/assets/2026-9-1.jpg)
+![](/assets/2026-9-1-b.jpg)
+![](/assets/2026-9-1-c.jpg)
+
+----
+
 <p id="2026-08-04"><time datetime="2026-08-04">2026-08-04 </time><a href="#2026-08-04" title="Link to this entry">#</a></p>
 
 Blog moved from [Neocities](https://neocities.org/), it was also an opportunity of learn Jekyll. (ps, previous address was really good: [notesfortheunfortunate.neocities.org](https://notesfortheunfortunate.neocities.org/)).
