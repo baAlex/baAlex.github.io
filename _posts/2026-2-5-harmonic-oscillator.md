@@ -2,7 +2,7 @@
 title: "Harmonic oscillator, I turned jiggle physics code into a synthesizer"
 short-title: "Harmonic oscillator"
 permalink: "/harmonic-oscillator"
-tags: [Audio, Physics]
+tags: [Audio, Synthesizer, Physics]
 date: 2026-2-5
 layout: post
 ---
