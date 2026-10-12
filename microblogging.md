@@ -5,6 +5,14 @@ short-title: Microblogging
 permalink: /microblogging/
 ---
 
+<p id="2026-10-12"><time datetime="2026-10-12">2026-10-12 </time><a href="#2026-10-12" title="Link to this entry">#</a></p>
+
+Totally vectorheart Y2k core futurism.
+
+![](/assets/2026-10-12.png)
+
+---
+
 <p id="2026-10-11"><time datetime="2026-10-11">2026-10-11 </time><a href="#2026-10-11" title="Link to this entry">#</a></p>
 
 From 3 months ago (oh no the typos):
